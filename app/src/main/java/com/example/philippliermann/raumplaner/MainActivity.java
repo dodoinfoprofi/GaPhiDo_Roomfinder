@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         getBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getWebsie();
+                getWebsite();
             }
         });
     }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void getWebsie(){
+    private void getWebsite(){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -86,8 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     Document doc = Jsoup.connect("https://cis.technikum-wien.at/cis/infoterminal/index.php?raumtyp_kurzbz=EDV&ort_kurzbz=EDV_A2.06&standort_id=").get();
+                    Elements test = doc.getElementsByClass("gruen_mitteText");
+                    builder.append(test).append("\n");
 
-                    String title = doc.title();
+
                     //Elements links = doc.select("a[href]");
                     //builder.append(title).append("\n");
 
@@ -95,8 +97,18 @@ public class MainActivity extends AppCompatActivity {
                         builder.append("\n").append("link : ").append(link.attr("href"))
                                 .append("\n").append("Text : ").append(link.text());
                     }*/
-                    Element content = doc.getElementById("content");
-                    builder.append(content).append("\n");
+
+
+                    //Element content = doc.getElementById("content");
+                    //builder.append(content).append("\n");
+
+
+                    /*for (Element tes : test) {
+                        builder.append("\n").append("Raum : ").append(test.attr("gruen_mitteText"));
+                    }*/
+
+
+
                 } catch (IOException e){
                     builder.append("error : ").append(e.getMessage()).append("\n");
                 }
