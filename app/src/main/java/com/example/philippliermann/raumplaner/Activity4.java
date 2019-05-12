@@ -2,7 +2,6 @@ package com.example.philippliermann.raumplaner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -19,7 +18,7 @@ public class Activity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_5);
-        result = (TextView)findViewById(R.id.result);
+        result = (TextView)findViewById(R.id.gruen);
         getWebsite();
     }
 
