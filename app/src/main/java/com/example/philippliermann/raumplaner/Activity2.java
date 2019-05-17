@@ -69,13 +69,14 @@ public class Activity2 extends AppCompatActivity {
 
                 runOnUiThread(new Runnable() {
                     @Override
-                    public void run() {
+                    public void run()
+                    {
                         gruen.setText(gruenStrBuilder.toString());
                         gruen.setTextColor(Color.GREEN);
-                        /*orange.setText(orangeStrBuilder.toString());
-                        orange.setTextColor(Color.YELLOW);
+                        orange.setText(orangeStrBuilder.toString());
+                        orange.setTextColor(Color.BLUE);
                         rot.setText(rotStrBuilder.toString());
-                        rot.setTextColor(Color.RED);*/
+                        rot.setTextColor(Color.RED);
 
                     }
                 });
