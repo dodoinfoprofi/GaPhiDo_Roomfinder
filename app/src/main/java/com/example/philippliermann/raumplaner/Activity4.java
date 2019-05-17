@@ -55,11 +55,11 @@ public class Activity4 extends AppCompatActivity {
                     @Override
                     public void run() {
                         gruen.setText(gruenStrBuilder.toString());
-                        gruen.setTextColor(Color.GREEN);
+                      //  gruen.setTextColor(Color.GREEN);
                         orange.setText(orangeStrBuilder.toString());
-                        orange.setTextColor(Color.BLUE);
+                        //orange.setTextColor(Color.BLUE);
                         rot.setText(rotStrBuilder.toString());
-                        rot.setTextColor(Color.RED);
+                       // rot.setTextColor(Color.RED);
 
                     }
                 });

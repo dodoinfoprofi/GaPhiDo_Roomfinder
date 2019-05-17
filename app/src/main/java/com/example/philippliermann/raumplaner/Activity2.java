@@ -24,27 +24,9 @@ public class Activity2 extends AppCompatActivity {
         gruen = (TextView)findViewById(R.id.gruen);
         orange = (TextView)findViewById(R.id.orange);
         rot = (TextView)findViewById(R.id.rot);
-
-        //Elements rot = website.getElementsByColor("rot_mitteText");
-
         getWebsite();
     }
 
-    /*private Elements getRedElements(final String color) {
-        new Thread(new Callable<Elements>() {
-            @Override
-            public Elements call() {
-                StringBuilder builder = new StringBuilder();
-
-                try {
-                    Document doc = Jsoup.connect("https://cis.technikum-wien.at/cis/infoterminal/index.php?raumtyp_kurzbz=HS&standort_id=").get();
-                    return doc.getElementsByClass(color);
-                } catch (IOException e){
-                    return null;
-                }
-            }
-        })
-    }*/
 
     private void getWebsite() {
         new Thread(new Runnable() {
@@ -72,11 +54,11 @@ public class Activity2 extends AppCompatActivity {
                     public void run()
                     {
                         gruen.setText(gruenStrBuilder.toString());
-                        gruen.setTextColor(Color.GREEN);
+                        //gruen.setTextColor(Color.GREEN);
                         orange.setText(orangeStrBuilder.toString());
-                        orange.setTextColor(Color.BLUE);
+                        //orange.setTextColor(Color.BLUE);
                         rot.setText(rotStrBuilder.toString());
-                        rot.setTextColor(Color.RED);
+                        //rot.setTextColor(Color.RED);
 
                     }
                 });
