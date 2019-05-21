@@ -4,49 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#13363D"
     tools:context=".Activity2">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="100dp"
-        android:layout_marginTop="50sp">
+        android:background="#13363D"
+        tools:context=".Activity2">
 
-        <TextView
-            android:id="@+id/gruen"
-            android:layout_width="100dp"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="10dp"
+            tools:layout_editor_absoluteY="100dp">
+
+            <TextView
+                android:id="@+id/gruen"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#1AE61A"
+                android:gravity="center"
+                android:text="gruen"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/orange"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:text="orange"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/rot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#db2511"
+                android:gravity="center"
+                android:text="rot"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#1AE61A"
-            android:gravity="center"
-            android:text="gruen"
-            android:textSize="18sp" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
 
-        <TextView
-            android:id="@+id/orange"
-            android:layout_width="100dp"
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#FF9800"
-            android:gravity="center"
-            android:text="orange"
-            android:textSize="18sp" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="25dp" />
 
-        <TextView
-            android:id="@+id/rot"
-            android:layout_width="100dp"
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#db2511"
-            android:gravity="center"
-            android:text="rot"
-            android:textSize="18sp" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="25dp" />
 
-    </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>
 
